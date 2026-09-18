@@ -1,0 +1,55 @@
+:root{
+  --bg:#ffffff;
+  --fg:#0f172a;
+  --muted:#64748b;
+  --accent:#0ea5a6;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  max-width:880px;
+  margin:48px auto;
+  padding:24px;
+}
+.hero{
+  text-align:center;
+  padding:48px 24px;
+  border-radius:12px;
+  background:linear-gradient(180deg,rgba(14,165,166,0.06),transparent);
+}
+.hero h1{
+  margin:0 0 8px 0;
+  font-size:28px;
+}
+.hero .subtitle{
+  color:var(--muted);
+  margin-top:0;
+}
+.contact{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  margin-top:18px;
+  padding:10px 14px;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(2,6,23,0.06);
+}
+.phone-icon{color:var(--accent)}
+.phone-number{
+  font-weight:600;
+}
+.faq{margin-top:36px}
+.faq h2{margin:0 0 12px 0}
+.q{background:#fafafa;padding:14px;border-radius:10px;margin-bottom:10px}
+.q h3{margin:0 0 8px 0;font-size:15px}
+.q p{margin:0;color:var(--muted)}
+.footer{margin-top:28px;color:var(--muted);text-align:center;font-size:13px}
