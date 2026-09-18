@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>نمونهٔ دیگ — دمو رابط کاربری</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="app-bar">
+      <button id="menuBtn" class="btn ghost">☰</button>
+      <h1 class="title">دموی دیگ</h1>
+      <div class="actions">
+        <button id="openDialog" class="btn primary">ویرایش پروفایل</button>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">پروفایل کاربری</h2>
+            <p class="card-desc">اطلاعات حساب کاربری را به‌روزرسانی کنید.</p>
+          </div>
+          <div class="card-action"><span class="badge success">فعال</span></div>
+        </div>
+        <div class="card-content">
+          <label class="label">ایمیل</label>
+          <div class="input-row">
+            <div class="input-root" id="emailRoot">
+              <span class="adornment">✉️</span>
+              <input id="emailInput" class="input" type="email" placeholder="armita@dig.ir">
+              <button class="clear-btn" id="clearEmail" title="پاک‌کردن">✖</button>
+            </div>
+          </div>
+
+          <label class="label">مبلغ (نمایش فارسی)</label>
+          <div class="input-row">
+            <div class="input-root" id="amountRoot">
+              <span class="adornment">ریال</span>
+              <input id="amountInput" class="input" type="text" inputmode="decimal" placeholder="۱۲۳٬۴۵۶">
+              <input id="amountHidden" type="hidden" name="amount" value="">
+              <button class="clear-btn" id="clearAmount" title="پاک‌کردن">✖</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer">
+          <button class="btn outline" id="saveBtn">ذخیره تغییرات</button>
+        </div>
+      </article>
+
+      <aside class="card small">
+        <div class="card-content">
+          <p class="stat">آمار امروز</p>
+          <p class="big">۱۲,۴۰۰</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Dialog -->
+  <div id="dialogOverlay" class="overlay hidden"></div>
+  <div id="dialog" class="dialog hidden" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+    <button id="dialogClose" class="close">✖</button>
+    <h2 id="dialogTitle">ویرایش پروفایل</h2>
+    <p class="muted">نام و ایمیل خود را به‌روزرسانی کنید.</p>
+    <div class="dialog-body">
+      <label class="label">نام</label>
+      <div class="input-root"><input class="input" id="nameInput" placeholder="نام و نام خانوادگی"></div>
+      <label class="label">ایمیل</label>
+      <div class="input-root"><input class="input" id="dialogEmail" placeholder="armita@dig.ir"></div>
+    </div>
+    <div class="dialog-actions">
+      <button id="dialogCancel" class="btn outline">انصراف</button>
+      <button id="dialogSave" class="btn primary">ذخیره</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
